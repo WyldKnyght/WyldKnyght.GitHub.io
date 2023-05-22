@@ -1,46 +1,32 @@
----
-title: News
-sidebar: home_sidebar
-keywords: news, blog, updates, release notes, announcements
-permalink: news.html
-toc: false
-folder: news
----
-<div class="home">
-
-    <div class="post-list">
-        {% for post in site.posts limit:10 %}
-
-
-    <h2>Pokémon TCG News &amp; Updates</h2>
-<ul>
-  <li><a href="https://www.pokemon.com/us/pokemon-news">Pokémon News</a> - The official Pokémon website often provides news, updates, and announcements related to the Pokémon Trading Card Game.</li>
-  <li><a href="https://pokemonblog.com/tag/pokemon-tcg/">Pokémon Blog</a> - The official Pokémon TCG Blog features articles, announcements, and strategy tips directly from the Pokémon Company.</li>
-  <li><a href="https://www.pokeguardian.com/">PokeGuardian</a> - Provides news, updates, and insights about the Pokémon Trading Card Game (TCG), covering new set releases, card reveals, tournament coverage, product information, and industry news.</li>
-  <li><a href="https://www.pokebeach.com/">PokéBeach</a> - Offers comprehensive news, articles, and updates on the Pokémon Trading Card Game (TCG), including set releases, card reveals, strategy discussions, and community-driven content.</li>
-  <li><a href="https://www.nintendolife.com/tags/pokemon-tcg">Nintendo Life</a> - Delivers news, reviews, and features related to the Pokémon Trading Card Game (TCG) along with comprehensive coverage of Pokémon video games and other related content.</li>
-</ul>
-
-
-
-
-
-
-        <h2><a class="post-link" href="{{ post.url | remove: "/" }}">{{ post.title }}</a></h2>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} /
-            {% for tag in post.tags %}
-
-                <a href="{{ "tag_" | append: tag | append: ".html"}}">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
-
-                {% endfor %}</span>
-        <p>{% if page.summary %} {{ page.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ post.content | truncatewords: 50 | strip_html }} {% endif %}</p>
-
-        {% endfor %}
-
-        <p><a href="feed.xml" class="btn btn-primary navbar-btn cursorNorm" role="button">RSS Subscribe{{tag}}</a></p>
-
-<hr />
-        <p>See more posts from the <a href="news_archive.html">News Archive</a>. </p>
-
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>News</title>
+</head>
+<body>
+  <h2><u>Pokémon TCG News &amp; Updates</u></h2>
+  <ul>
+    <li>
+      <a href="https://www.pokemon.com/us/pokemon-news">Pokémon News</a>:<br>
+      The official Pokémon website often provides news, updates, and announcements related to the Pokémon Trading Card Game.
+    </li>
+    <li>
+      <a href="https://pokemonblog.com/tag/pokemon-tcg/">Pokémon Blog</a>:<br>
+      The official Pokémon TCG Blog features articles, announcements, and strategy tips directly from the Pokémon Company.
+    </li>
+    <li>
+      <a href="https://www.pokeguardian.com/">PokeGuardian</a>:<br>
+      Provides news, updates, and insights about the Pokémon Trading Card Game (TCG), covering new set releases, card reveals, tournament coverage, product information, and industry news.
+    </li>
+    <li>
+      <a href="https://www.pokebeach.com/">PokéBeach</a>:<br>
+      Offers comprehensive news, articles, and updates on the Pokémon Trading Card Game (TCG), including set releases, card reveals, strategy discussions, and community-driven content.
+    </li>
+    <li>
+      <a href="https://www.nintendolife.com/tags/pokemon-tcg">Nintendo Life</a>:<br>
+      Delivers news, reviews, and features related to the Pokémon Trading Card Game (TCG) along with comprehensive coverage of Pokémon video games and other related content.
+    </li>
+  </ul>
+</body>
+</html>
